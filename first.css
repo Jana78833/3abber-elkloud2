@@ -1,0 +1,110 @@
+    body {
+      font-family: 'serif', sans-serif;
+      background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      direction: rtl;
+      text-align: center;
+    }
+
+    .fade-in {
+      background-image: url("WhatsApp\ Image\ 2025-09-05\ at\ 15.42.15_8a903857.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 90%;
+      height: 650px;
+      border-radius: 30px;
+      box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      animation: fadeIn 1s ease-in forwards;
+      opacity: 0;
+      position: relative;
+      color: #fff;
+    }
+
+    .fade-in::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
+    }
+
+    .fade-in h2,
+    .fade-in p,
+    .fade-in button {
+      position: relative;
+      z-index: 1;
+      transform: translate(-300px,-60px);
+      font-size: 30px;
+      font-family: "Reem Kufi", sans-serif;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    button a {
+      background-color: #000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1.125rem;
+      text-decoration: none;
+    }
+
+    button a:hover {
+      background-color: #7c7c7c;
+    }
+
+    /* 📱 الموبايل */
+    @media (max-width: 768px) {
+      .fade-in {
+        height: auto;
+        padding: 40px 20px;
+      }
+      .fade-in h2,
+      .fade-in p,
+      .fade-in button {
+        transform: none;   
+        font-size: 20px;
+        text-align: center;
+      }
+      button a {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+
+    /* 📲 التابلت */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .fade-in h2,
+      .fade-in p,
+      .fade-in button {
+        transform: none; 
+        font-size: 24px;
+      }
+      button a {
+        font-size: 1.05rem;
+        padding: 0.7rem 1.3rem;
+      }
+    }
